@@ -1,0 +1,212 @@
+/*
+*   ALL CSS RELATED TAGS AND RULES CAN BE FURTHER RESEARCHED ON http://www.w3schools.com/css/ I WONT GO INTO MUCH DETAIL HERE... COME ON, GET UP UR LAZY ARSE AND DO SOMETHING FOR ONCE WOULD YOU?
+*/
+
+html
+{
+    height: 100%; /*set the height of the html tag in index.html to 100% (duh, obviously)*/
+}
+body
+{
+    height: 100%; /* set the height of the body tag to 100%*/
+}
+.bg-color
+{
+    background: #FFFFFF; /* set background color of bg-color class to white. the bg-color class is used in body tag*/
+}
+a, a:active, a:focus /* This is used by to stop mozilla nad IE to show an annoying dotted box when the SBC logo is clicked on the fron page*/
+{
+    outline: none;
+    outline: 0;
+}
+
+#preloader  { /* Preloader CSS which specefies its position and z-index (the z-index in short specifies which element will be displayed 'above' depending on element overlap*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 99;
+    height: 100%;
+}
+
+#status  { /* Preloader related CSS on state change which specefies its position and z-index (the z-index in short specifies which element will be displayed 'above' depending on element overlap*/
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url("../images/ajax-loader.GIF"); /* This specifies teh pre-loader gif image. */
+    background-repeat: no-repeat; /* No repeat for the gif image, otherwise u would have several horizonatally and vertically lined gif images */
+    background-position: center; /* center the background */
+    margin: -100px 0 0 -100px; /* Margin from left top bottom and right */
+}
+
+img.click-me-button /* The click me button that is the main SBC logo on the first page , with width and height = 100%. The 'content' css rule is just another way of specifying images without src in the <img> tag. However this is only rendered in Google Chrome. */
+{
+    width: 100%;
+    height: 100%;
+    content: url("../images/SBCWebsiteButtonComingSoon.png");
+
+
+}
+div.container-va /* The container-va helps alignment of the elements in the center */
+{
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+}
+div.vertical-center-row /* helps align the element in the center */
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+img.bg-arrow-resize /* sets the top arrow on the front page with proper styling, and its opacity to 0, inorder to be used for the fading effect. */
+{
+    width: 70%;
+    height: 70%;
+    content: url("../images/bg-arrow-sbc.png");
+    opacity: 0;
+}
+img.bg-arrow-bottom-resize /* sets the bottom arrow on the front page with proper styling, and its opacity to 0, inorder to be used for the fading effect. */
+{
+    width: 260%;
+    height: 200%;
+    content: url("../images/bg-arrow-sbc-bottom.png");
+    opacity: 0;
+}
+
+.top-button /* sets the top SBC logo on the second page with proper styling */
+{
+    content: url("../images/SBCWebsiteButtonComingSoon.png");
+    width: 70%;
+    height: 70%;
+    margin-left: 0px;
+}
+.mp3-player-bg-image /* UNUSED CLASS, USED TO GIVE BACKGROUND FOR THE MP3 PLAYER BEFORE. INSTEAD NOW I GIV THE DIV CONTAINER A BACKGROUND.. THIS IS USELESS CODE, FEEL FREE TO REMOVE IT */
+{
+    content: url("../images/bg-mp3-player.png");
+    margin-left: -65px;
+    margin-top: -15px;
+
+
+}
+.mp3-player-display /* NO STYLING DONE HERE, FEEL FREE TO REMOVE IT, OR GIVE YOUR OWN STYLING */
+{
+
+}
+.mp3-display-2 /*the mp3-display-2 wrapper around the mp3 player button. This gives a background and a border radius to the div so that it appears round on desktops and cylindrical on mobile devices */
+{
+    background-color : #FFFFFF;
+    border-radius: 25px;
+    width: 30%;
+}
+
+
+img.grayscale { /* THIS FILTER DOES NOT WORK ON IE10+. Link of tutorial here (http://stackoverflow.com/questions/7273927/image-greyscale-with-css-re-color-on-mouse-over). */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+img.grayscale:hover { /* THIS FILTER DOES NOT WORK ON IE10+. Link of tutorial here (http://stackoverflow.com/questions/7273927/image-greyscale-with-css-re-color-on-mouse-over).  This has my own modification for the easing effect in mozilla and opera and webkit browsers. :) */
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: 0.3s all ease-in; /* Transition fading color effects for different browsers, somehow does not work for mozilla :'(, ill check that out later */
+    -o-transition: 0.3s all ease-in;
+    -moz-transition: 0.3s all ease-in;
+    transition: 0.3s all ease-in;
+}
+
+.bg-superbatawesome-fade /* logo pointing image on 2nd pages styling, again opacity set to 0 for jQuery fadeTo transition */
+{
+    margin-top: 125%;
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+}
+.comic-bg-div-fade /* comic book background */
+{
+    background-color: #FFFFFF;
+    opacity: 0;
+}
+.img-1-fade /* Panel Image Styling */
+{
+    padding-left: 8%;
+    padding-top: 5%;
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+}
+.img-2-fade /* Panel Image Styling */
+{
+    padding-left: 8%;
+    width: 60%;
+    height: 60%;
+    opacity: 0;
+}
+.img-3-fade /* Panel Image Styling */
+{
+    padding-left: 5%;
+    width: 30%;
+    height: 30%;
+    opacity: 0;
+}
+.img-4-fade /* Panel Image Styling */
+{
+    padding-left: 8%;
+    width: 40%;
+    height: 40%;
+    opacity: 0;
+}
+.img-5-fade /* Panel Image Styling */
+{
+    padding-left: 5%;
+    width: 54%;
+    height: 54%;
+    opacity: 0;
+}
+.img-6-fade /* Panel Image Styling */
+{
+    padding-left: 8%;
+    padding-bottom: 5%;
+    width: 55%;
+    height: 55%;
+    opacity: 0;
+}
+.img-7-fade /* Panel Image Styling */
+{
+    padding-left: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+    height: 40%;
+    opacity: 0;
+}
+.epic-shit /* The description png styling */
+{
+    margin-left: 15%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.epic-div /* UNUSED STYLING, FEEL FREE TO REMOVE */
+{
+
+}
+.bg-scroll-fade /* scroll down png indicator css */
+{
+    width: 80%;
+    height: 80%;
+    opacity: 0;
+}
+.bg-panel-fade /* panel hover indicator image png's styling */
+{
+    opacity: 0;
+}
+.bg-arrow-music-fade /* music player pointing arrow png image styling */
+{
+    opacity: 0;
+}
