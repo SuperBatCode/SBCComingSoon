@@ -5,6 +5,27 @@ so that they display properly on low-resolution devices. So here, i basically ov
 in order for the elements to be displayed properly on smaller resolution devices such as tablets and mobile phones.
 */
 
+@media (min-width : 218px)
+   and (max-width: 319px)
+{
+    img.bg-arrow-resize{content: url("../images/bg-arrow-sbc-2.png");margin-left: 30px;}
+    img.bg-arrow-bottom-resize{display: none;}
+    .bg-kill{display: none;}
+
+    .top-button{width: 70%;height: 70%; margin-left: 17%;}
+    .bg-superbatawesome-fade{width: 80%;height: 80%;margin-left: 15%;margin-top: -8px;}
+    .bg-panel-fade{width: 80%; height: 80%; margin-left: 15%; margin-top: 20px;}
+    .bg-scroll-fade{width: 0px; height: 0px;}
+    .bg-arrow-music-fade{width: 80%;height: 80%; margin-bottom: -45px;}
+    .epic-div{margin-bottom: 60px; margin-left: -20%}
+    .epic-shit{width: 90%;height: 80%;}
+    .ui360{vertical-align: middle;}
+    .mp3-player-display{background-color: #FFFFFF;border-radius: 25px;width: 30%}
+    .mp3-player-bg-image{margin-left: -65px;}
+
+
+}
+
 @media (min-width: 320px)
    and (max-width: 449px)
 {
